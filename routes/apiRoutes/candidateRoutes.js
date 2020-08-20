@@ -25,7 +25,7 @@ router.get('/candidates', (req, res) => {
             data: rows
         });
     });
-    3
+    
 });
 
 // GET single candidate
@@ -82,7 +82,7 @@ router.post('/candidate', ({ body }, res) => {
     }
     const sql = `INSERT INTO candidates (first_name, last_name, industry_connected)
                 VALUES (?,?,?)`;
-    const params = [body.first_name, body.last_name, body.industry_connected];
+    const params = [first_name, last_name, industry_connected];
     //ES5 function not arrow function to use 'this'
     db.run(sql, params, function (err, result) {
         if (err) {

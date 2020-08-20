@@ -12,7 +12,7 @@ const apiRoutes = require('./routes/apiRoutes');
 app.use('/api', apiRoutes);
 
 app.use(express.urlencoded({
-    extended: false
+    extended: true
 }));
 app.use(express.json());
 
